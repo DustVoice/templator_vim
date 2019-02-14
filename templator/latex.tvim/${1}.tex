@@ -1,0 +1,71 @@
+\documentclass{article}
+<?vimcursor?>
+% ==============================
+% Constants
+\newcommand{\MyDocTitle}{Übung 1}
+\newcommand{\MyDocAuthor}{David Holland - \textit{Übungsgruppe}}
+\newcommand{\MyDocDate}{\today{}}
+% END Constants
+% ==============================
+
+\usepackage{techmath}
+
+% ==============================
+% Meta
+\title{\MyDocTitle{}}
+\author{\MyDocAuthor{}}
+\date{\MyDocDate{}}
+% END Meta
+% ==============================
+
+
+\begin{document}
+
+\renewcommand{\seriesname}{Aufgabe}
+\setcounter{exerciseseries}{0}
+
+\maketitle
+
+\tableofcontents
+
+\newpage
+
+% ==============================
+% Beginning of Document
+%
+% Note: For subfiles, use
+%
+%       \subfile{filename.tex}
+%
+%       and in the subfile:
+%
+%       \documentclass[main_filename.tex]{subfiles}
+%
+%       and leave the whole
+%       preamble out.
+%       Also don't forget to insert
+%       \begin{document} and
+%       \end{document} into subfiles
+% ==============================
+
+\section{Hausübung}
+
+\subsection{Aufgabe H1 {\normalfont (Aufgabentitel)}}
+
+\subsubsection{Aufgabenstellung}
+\begin{enumerate}[label=(\alph*)]
+	\item Aufgabentext
+		\begin{enumerate}[label=(\roman*)]
+			\item Teilaufgabe
+		\end{enumerate}
+\end{enumerate}
+
+\subsubsection{Lösung}
+\begin{enumerate}[label=(\alph*)]
+	\item Aufgabentext
+		\begin{enumerate}[label=(\roman*)]
+			\item Lösung Teilaufgabe
+		\end{enumerate}
+\end{enumerate}
+
+\end{document}

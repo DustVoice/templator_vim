@@ -1,0 +1,10 @@
+{
+	"title": "DustDown",
+	"useSideMenu": true,
+	"sideMenuLevel": 3,
+	"sideMenuUseFirstLevel": false,
+	"lineBreaks": "gfm",
+	"additionalFooterText": "",
+	"anchorCharacter": "&para;",
+	"tocAnchor": "[ &uarr; ]"
+}

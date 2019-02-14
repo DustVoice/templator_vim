@@ -1,0 +1,94 @@
+﻿= Anzeigenüberschrift
+:toc: left
+:toc-title: Inhaltsverzeichnis
+:docinfo: shared
+:last-update-label: Zuletzt geändert:
+:table-caption!:
+:icons: font
+:POPUP: role="thumb popup"
+:LIGHTBOX: frame="none", grid="none", stripes="none"
+
+++++
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-colorbox@1.6.4/jquery.colorbox.min.js"></script>
+
+<script>
+	jQuery(document).ready(function () {
+		jQuery('.popup').find('img').each(function () {
+			var src_link = jQuery(this).attr('src');
+			jQuery(this).wrap('<a href=' + src_link + ' class="colorbox_popup"></a>');
+		});
+		jQuery('.colorbox_popup').colorbox({rel: "popup_box", width: "75%", height: "75%"});
+	});
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/jquery-colorbox@1.6.4/example5/colorbox.css" />
+
+<style>
+.lightbox tr td:first-child { padding-left: 0; }
+.lightbox tr td p { font-size: inherit; }
+</style>
+++++
+
+====
+Diese Seite stellt alle Bilder aus der link:#[ebay-Anzeige] noch einmal übersichtlich und geordnet, aber vor Allem **in voller Qualität** zur Verfügung.
+
+Den ebay-Anzeigentext finden Sie unter link:#Artikelbeschreibung[Artikelbeschreibung].
+
+TIP: **Klicken Sie auf die Bilder, um diese zu vergrößern.** +
+Mit `Rechtsklick` -> `Link in neuem Tab öffnen` sehen Sie das jeweilige Originalbild.
+====
+
+== Bilder
+
+image::./images/Sample_Image.JPG[SAMPLE, {POPUP}]
+
+=== Gesamtansicht
+
+[.lightbox, cols="2,>1,>1", {LIGHTBOX}]
+|===
+|A sample text and two images to the right.
+|image:./images/Image1.png[Image1, {POPUP}]
+|image:./images/Image2.png[Image1, {POPUP}]
+|===
+
+[#Artikelbeschreibung]
+== Artikelbeschreibung
+
+Hiermit biete ich ... an.
+
+Es handelt sich hierbei um einen komplett neuen Artikel (im Originalkarton).
+
+Das Produkt stammt aus dem Ausverkauf eines Küchenstudios. Dort war es mehrere Jahre ausgestellt, jedoch war ... noch nie/teilweise benutzt worden. Der Artikel diente ausschließlich zu Ausstellungszwecken und ist nicht beschädigt.
+
+Nun zu den technischen Daten:
+
+
+
+== Preis
+
+Die UVP des Herstellers liegt bei ...,-€.
+
+Der Artikel ist wie schon erwähnt noch komplett unbenutzt und unbeschädigt, somit also ein neues Ausstellungsstück. Daher ist der Preis von ...,- € inklusive Versandkosten ein wirkliches Schnäppchen.
+
+NOTE: Dies ist ein privater Verkauf ohne Rücknahme und Garantie.
+
+== Kontakt
+
+Falls Sie irgendwelche Fragen haben, stehe ich Ihnen gerne telefonisch oder per Mail zur Verfügung. Zögern sie also nicht mich zu kontaktieren.
+
+++++
+<div class="nobr"><table>
+
+<tr>
+<td>E-Mail:</td>
+++++
+pass:[<td>]link:mailto:davidholland5499@outlook[E-Mail an David Holland senden]pass:[</td>]
+++++
+</tr>
+<td>Mobil:</td>
+<td>+49 160 90150751</td>
+</tr>
+</table>
+</div>
+++++

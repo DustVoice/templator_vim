@@ -1,0 +1,24 @@
+﻿= Überschrift
+David Holland <davidholland5499@outlook>
+v1.0, 2018-10-24
+:toc: left
+:toc-title: Inhaltsverzeichnis
+:doctype: article
+:docinfo: shared
+:source-highlighter: highlightjs
+:last-update-label: Zuletzt geändert:
+:table-caption!:
+:POPUP: role="thumb popup"
+:LIGHTBOX: frame="none", grid="none", stripes="none"
+
+[#Hauptteil]
+== Hauptteil
+
+Text
+
+[.lightbox, cols="2,>1,>1", {LIGHTBOX}]
+|===
+|A sample text and two images to the right.
+|image:./images/Image1.png[Image1, {POPUP}]
+|image:./images/Image2.png[Image1, {POPUP}]
+|===

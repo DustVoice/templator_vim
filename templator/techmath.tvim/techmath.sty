@@ -1,0 +1,112 @@
+\ProvidesPackage{techmath}
+
+\usepackage{subfiles}
+\usepackage[
+style=acm
+]{biblatex}
+% ==============================
+% General Config
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provides euro and other symbols
+\else % if luatex or xelatex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+\makeatletter
+\def\fps@figure{htbp} % set default figure placement to htbp
+\makeatother
+
+\usepackage{hyperref}
+\hypersetup{
+            pdftitle={\MyDocTitle{}},
+            pdfauthor={\MyDocAuthor{}},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+% END General Config
+% ==============================
+
+
+% ==============================
+% Usepackages
+\usepackage[usenames,dvipsnames]{pstricks}
+\usepackage{pstricks-add}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{boldline}
+\usepackage{a4wide}
+\usepackage[german]{babel}
+\usepackage[local,nolabels,exerciseaslist]{exsol}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[cache=false]{minted}
+\usepackage{graphicx,lmodern}
+\usepackage[width=0.8\linewidth, borderwidth=0.075em, tickswidth=0.075em, heightr=2.0, filledcolor=TealBlue, emptycolor=white, roundnessr=0.15,  subdivisions=10]{progressbar}
+% END Usepackages
+% ==============================
+
+
+% ==============================
+% Redefinitions
+\definecolor{monokaibg}{HTML}{272822}
+\definecolor{monokaifg}{rgb}{0.97,0.97,0.95}
+\setminted{style=monokai, bgcolor=monokaibg, obeytabs=true, showtabs=true, linenos, breaklines, breakautoindent=true}
+\renewcommand{\theFancyVerbLine}{\sffamily\textcolor[rgb]{0.0,0.0,0.0}{\scalebox{1.25}{\scriptsize\oldstylenums{\arabic{FancyVerbLine}}}}}
+\definecolor{TealBlue}{HTML}{2BABAC}
+% END Redefinitions
+% ==============================
+
+
+% ==============================
+% Special Definitions
+\setlength{\exsolexercisetopbottomsep}{0pt plus 0pt minus 1pt}
+\setlength{\exsolexerciseleftmargin}{2em}
+\setlength{\exsolexerciserightmargin}{1em}
+\setlength{\exsolexerciseparindent}{0em}
+\setlength{\exsolexerciselabelsep}{1ex}
+\setlength{\exsolexerciselabelwidth}{30pt}
+\setlength{\exsolexerciseitemindent}{0pt}
+\setlength{\exsolexerciseparsep}{\parskip}
+% END Special Definitions
+% ==============================
+
+
+% Define Counter Function
+\newcommand{\getcounter}[1]{
+	\ifnum\value{#1}=100
+		1.0
+	\else
+		0.\arabic{#1}
+	\fi}
+% END Define Counter Function
+% ==============================

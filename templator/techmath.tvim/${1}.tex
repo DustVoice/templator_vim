@@ -1,0 +1,104 @@
+﻿\documentclass{article}
+
+% ==============================
+% Constants
+\newcommand{\MyDocTitle}{Title}
+\newcommand{\MyDocAuthor}{David Holland}
+\newcommand{\MyDocDate}{20.08.2018}
+% END Constants
+% ==============================
+
+\usepackage{techmath}
+
+% ==============================
+% Meta
+\title{\MyDocTitle{}}
+\author{\MyDocAuthor{}}
+\date{\MyDocDate{}}
+% END Meta
+% ==============================
+
+
+\begin{document}
+
+\renewcommand{\seriesname}{Aufgabe}
+\setcounter{exerciseseries}{0}
+
+\addbibresource{main.bib}
+
+\maketitle
+
+\tableofcontents
+
+\newpage
+
+
+% ==============================
+% Beginning of Document
+%
+% Note: For subfiles, use
+%
+%       \subfile{filename.tex}
+%
+%       and in the subfile:
+%
+%       \documentclass[main_filename.tex]{subfiles}
+%
+%       and leave the whole
+%       preamble out.
+%       Also don't forget to insert
+%       \begin{document} and
+%       \end{document} into subfiles
+% ==============================
+
+<?vimcursor?>
+
+\section{\exercisesname}
+\begin{exerciseseries}{Aufgaben-Name}
+	\begin{exercise}
+		\begin{enumerate}[label=(\alph*)]
+			\item Eine Beispiel Rechnung:
+			\item \(\forall x \in \mathbb{Q} : x^2 > 0\)
+		\end{enumerate}
+	\end{exercise}
+	\begin{solution}
+		Das wäre jetzt die Lösung
+	\end{solution}
+\end{exerciseseries}
+
+\section{\solutionsname}
+\loadSolutions
+
+\progressbar{0.5}
+
+\begin{tabular}{|c|c|}
+	\hline
+	Spalte 1 & Spalte 2 \\ \hlineB{3}
+	Zeile 1 & Zeile 1 \\ \hline
+	Zeile 2 & Zeile 2 \\
+	\hline
+\end{tabular}
+
+% ==============================
+% Uncomment to print bibliography
+% \printbibliography
+%
+% Here are some other options:
+%
+% \printbibliography[type=article,title={Articles only}]
+% \printbibliography[type=book,title={Books only}]
+% --> Only print bibliography items of specific typed (with custom title)
+%
+% \printbibliography[keyword={physics},title={Physics-related only}]
+% \printbibliography[keyword={latex},title={\LaTeX-related only}]
+% --> Only print bibliography items with a specific keyword (with custom title)
+%
+%
+% \printbibliography[heading=bibintoc,title={Whole bibliography}]
+% --> Add bibliography to tableofcontents with a custom title
+%
+% \printbibliography[heading=subbibintoc,title={Articles only}]
+% --> Add bibliography to tableofcontents, but as a subsection
+% ==============================
+
+\end{document}
